@@ -5,6 +5,6 @@ export type Message = {
 };
 
 export type ChatStreamEvent = {
-  uuid: string;
-  response: string;
+  chatId: string;
+  answer: string;
 };

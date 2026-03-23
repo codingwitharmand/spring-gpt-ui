@@ -21,10 +21,10 @@ export function useChat() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const updateAssistantMessage = (messageId: string, event: ChatStreamEvent) => {
-    setChatId(event.uuid);
+     setChatId(event.chatId);
     setMessages((current) =>
       current.map((message) =>
-        message.id === messageId ? mergeAssistantChunk(message, event.response) : message
+        message.id === messageId ? mergeAssistantChunk(message, event.answer) : message
       )
     );
   };
